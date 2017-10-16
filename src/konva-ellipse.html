@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            background-color: #F0F0F0;
+        }
+    </style>
+</head>
+<body>
+<div id="demo"></div>
+</body>
+</html>
+<script src="./lib/konva.1.7.2.min.js"></script>
+<script>
+    // create a stage
+    var stage = new Konva.Stage({
+        container: 'demo',
+        width: 500,
+        height: 500
+    });
+
+    // create the layer
+    var layer = new Konva.Layer();
+
+    // create the shape ellipse
+    var oval = new Konva.Ellipse({
+        x: stage.getWidth() / 2,
+        y: stage.getHeight() / 2,
+        radius: {
+            x: 100,
+            y: 50
+        },
+        fill: 'pink',
+        stroke: 'red',
+        strokeWidth: 4
+    });
+
+    // add the ellipse shape to layer
+    layer.add(oval);
+
+    // add the layer to the stage
+    stage.add(layer);
+
+</script>
